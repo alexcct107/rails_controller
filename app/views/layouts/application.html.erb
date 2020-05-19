@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyecto</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
+  </head>
+
+  <body class="is-preload">
+
+		<!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+        <header id="header">
+          <div class="inner">
+
+
+            <!-- Nav -->
+              <nav>
+                <ul>
+                  <li><a href="#menu">Menu</a></li>
+                </ul>
+              </nav>
+          </div>
+        </header>
+
+      <!-- Menu -->
+        <nav id="menu">
+          <h2>Menu</h2>
+          <ul>
+            <li> <%= link_to 'Home', pages_index_path %> </li>
+            <li> <%= link_to 'Sobre Mi', pages_about_path %> </li>
+          </ul>
+        </nav>
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+            <%= yield %>  
+          </div>
+        </div>
+
+      <!-- Footer -->
+        <footer id="footer">
+          <div class="inner">
+           Iván Carrasco || Desarrollador Web - © Copyright <%= Time.now.year %>   
+          </div>
+        </footer>
+
+    </div>
+
+  	<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</html>
